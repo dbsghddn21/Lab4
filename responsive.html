@@ -18,7 +18,7 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
-
+	<link rel="stylesheet" type="text/css" href="menu.css">
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -48,36 +48,83 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
-			/*I need some CSS codes.*/		
+			float: left;
 		}
 
 		.large, .medium, .small {
-			/*I need some CSS codes.*/
+			width: auto;
 		}
 		
 		.gap {
-			/*I need some CSS codes.*/
+			clear: both;
+			height: 50px;
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
+				box-sizing: border-box;
 			}
 			.small { 
-				/*I need some CSS codes.*/
+				width: 30%;
+				box-sizing: border-box;
+			 }
+			 .medium, .small {
+				float: left;
 			 }
 		}
 
         @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
-        }
+			.large { 
+				width: 100%;
+			}
+			.medium { 
+				width: 60%;
+				box-sizing: border-box;
+			}
+			.small { 
+				width: 40%;
+				box-sizing: border-box;
+			}
+			 .medium, .small {
+				float: left;
+			}
+			.main { 
+				margin-left: 0;
+			}
+			.menu {
+        		width: 100%;
+        		float: none;
+    		}
+			.menu ul li {
+				display: inline-block;
+				float: none;
+			}
+		}
 
         @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
-        }
+			.large, .medium, .small {
+				width: 100%;
+				float: none;
+			}
+			.h1 {
+				font-size: 18px;
+			}
+			.main { 
+				margin-left: 0;
+			}
+			.menu {
+        		width: 100%;
+        		float: none;
+    		}
+			.menu ul li {
+				display: inline-block;
+				float: none;
+			}
+		}
 
         
     </style>
